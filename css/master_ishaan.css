@@ -1,6 +1,4 @@
-/* Modern CSS for Portfolio Website */
-
-/* Reset default styles for consistency */
+/* Modern Reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,33 +7,51 @@
 
 /* Body Styling */
 body {
-    background-color: #f4f4f9; /* Light grayish-blue background for a modern look */
+    background-color: #f4f4f9; /* Light grayish-blue background */
     color: #333; /* Dark gray text for readability */
-    font-family: 'Poppins', Arial, sans-serif; /* Modern, professional font */
+    font-family: 'Poppins', Arial, sans-serif;
     text-align: center;
     line-height: 1.6;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container for content */
+.container {
+    max-width: 900px;
+    width: 90%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* General Styling for Headings */
 h1, h2, h3, h4, h5 {
     font-weight: 600;
     margin-top: 2rem;
+    text-align: center;
 }
 
 h1 {
     font-size: 2.5rem;
-    color: #2c3e50; /* Dark Blue */
+    color: #2c3e50;
 }
 
 h2 {
     font-size: 2rem;
-    color: #e74c3c; /* Soft Red */
+    color: #e74c3c;
 }
 
 h3 {
     font-size: 1.75rem;
-    color: #34495e; /* Deep Gray-Blue */
+    color: #34495e;
 }
 
 h4 {
@@ -48,25 +64,58 @@ h5 {
     color: #777;
 }
 
+/* Navigation Bar */
+nav {
+    width: 100%;
+    max-width: 900px;
+    background: #2c3e50;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e74c3c;
+}
+
 /* Hyperlink Styling */
 a {
-    color: #3498db; /* Soft Blue */
+    color: #3498db;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #e74c3c; /* Changes to Soft Red on hover */
+    color: #e74c3c;
+}
+
+/* Bullet Points Styling */
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    padding-left: 20px;
+    list-style-type: square;
 }
 
 /* Section Styling */
 section {
-    max-width: 900px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
     margin-top: 20px;
 }
 
@@ -76,6 +125,9 @@ footer {
     padding: 20px;
     font-size: 0.9rem;
     color: #888;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
 }
 
 /* Horizontal Rule Styling */
@@ -87,20 +139,20 @@ hr {
     width: 80%;
 }
 
-/* Bullet Points Styling */
-ul {
-    display: table;
-    margin: 0 auto;
-    text-align: left;
-    list-style-type: square;
-    padding-left: 20px;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    section {
-        width: 90%;
+    .container {
+        width: 95%;
         padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 5px 0;
     }
 
     h1 {
@@ -113,5 +165,9 @@ ul {
 
     h3 {
         font-size: 1.5rem;
+    }
+
+    ul {
+        width: 90%;
     }
 }
