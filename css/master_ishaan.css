@@ -5,46 +5,38 @@
     box-sizing: border-box;
 }
 
-/* Elegant Red & Gold Theme */
+/* Background and Text Styling */
 body {
-    background-color: #1a1a1a; /* Dark background */
-    color: #f5c518; /* Gold text */
+    background-color: #f5f0e1; /* Cream background */
+    color: black; /* Normal text color */
     font-family: 'Poppins', Arial, sans-serif;
     text-align: center;
     min-height: 100vh;
     padding: 20px;
 }
 
-/* Header */
+/* Header Styling */
 h1 {
     font-size: 2.5rem;
-    color: #f5c518;
+    color: #800000; /* Maroon-Red */
     margin-top: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* Hero Image - Centered */
-.hero {
-    display: block;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(255, 0, 0, 0.3);
-}
-
-/* Section Styling */
+/* Section Headings */
 h2 {
     font-size: 2rem;
-    color: #ffcc00;
+    color: #800000; /* Maroon-Red */
     margin-top: 40px;
 }
 
-/* Space Between "About Me" and "Credentials" */
+/* About Me Section */
 #about-me {
     margin-bottom: 50px;
 }
 
-/* About Me Paragraphs */
+/* Paragraphs */
 p {
     font-size: 1.2rem;
     line-height: 1.6;
@@ -55,39 +47,39 @@ p {
 
 /* Hyperlinks */
 a {
-    color: #ffcc00;
+    color: #800000; /* Maroon-Red */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #fff;
+    color: black;
     text-decoration: underline;
 }
 
-/* Images - Align Left & Right */
+/* UWB & Bellevue College Images (Increased by 50%) */
 .image-container {
     display: flex;
     justify-content: space-between;
-    max-width: 800px;
+    max-width: 900px;
     margin: 30px auto;
     align-items: center;
 }
 
 .image-left {
-    width: 100px;
+    width: 150px; /* Increased 50% from 100px */
     align-self: flex-start;
 }
 
 .image-right {
-    width: 60px;
+    width: 90px; /* Increased 50% from 60px */
     align-self: flex-end;
 }
 
-/* Contact Section */
-h2:last-of-type {
-    margin-top: 50px;
+/* Centering Text for Credentials & Contact */
+#credentials p, #contact p {
+    text-align: center;
 }
 
 /* Footer */
@@ -95,7 +87,7 @@ footer {
     margin-top: 3rem;
     padding: 20px;
     font-size: 1rem;
-    color: #ffcc00;
+    color: black;
     text-align: center;
 }
 
