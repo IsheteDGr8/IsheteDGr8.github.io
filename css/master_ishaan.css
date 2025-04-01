@@ -1,78 +1,48 @@
-/* Modern Reset */
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
+/* Beautiful Background with Gradient */
 body {
-    background-color: #f4f4f9; /* Light grayish-blue background */
-    color: #333; /* Dark gray text for readability */
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
     font-family: 'Poppins', Arial, sans-serif;
-    text-align: center;
-    line-height: 1.6;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
 }
 
-/* Container for content */
+/* Container with Glassmorphism Effect */
 .container {
     max-width: 900px;
     width: 90%;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* General Styling for Headings */
-h1, h2, h3, h4, h5 {
-    font-weight: 600;
-    margin-top: 2rem;
-    text-align: center;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-}
-
-h2 {
-    font-size: 2rem;
-    color: #e74c3c;
-}
-
-h3 {
-    font-size: 1.75rem;
-    color: #34495e;
-}
-
-h4 {
-    font-size: 1.5rem;
-    color: #555;
-}
-
-h5 {
-    font-size: 1.2rem;
-    color: #777;
-}
-
-/* Navigation Bar */
+/* Navigation Bar with Floating Effect */
 nav {
     width: 100%;
     max-width: 900px;
-    background: #2c3e50;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     padding: 15px 0;
     display: flex;
     justify-content: center;
     border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
     margin-top: 20px;
 }
 
@@ -80,23 +50,62 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
+    font-weight: 500;
     margin: 0 15px;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: #e74c3c;
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Headings with Elegant Styles */
+h1 {
+    font-size: 2.8rem;
+    color: #ffcc00;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #f8f8f8;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+h3 {
+    font-size: 1.75rem;
+    color: #f1c40f;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: #ddd;
 }
 
 /* Hyperlink Styling */
 a {
-    color: #3498db;
+    color: #ffcc00;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-    color: #e74c3c;
+    color: #f39c12;
+}
+
+/* Styled Sections */
+section {
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    padding: 20px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
 }
 
 /* Bullet Points Styling */
@@ -109,41 +118,35 @@ ul {
     margin: auto;
     padding-left: 20px;
     list-style-type: square;
+    font-size: 1.1rem;
+    color: white;
 }
 
-/* Section Styling */
-section {
-    width: 100%;
-    max-width: 800px;
-    text-align: left;
-    margin-top: 20px;
+/* Animated Horizontal Line */
+hr {
+    border: 0;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #ffcc00, transparent);
+    margin: 3rem auto;
+    width: 80%;
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
     margin-top: 3rem;
     padding: 20px;
-    font-size: 0.9rem;
-    color: #888;
+    font-size: 1rem;
+    color: white;
     width: 100%;
     max-width: 900px;
     text-align: center;
-}
-
-/* Horizontal Rule Styling */
-hr {
-    border: 0;
-    height: 2px;
-    background: #ddd;
-    margin: 3rem auto;
-    width: 80%;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
         width: 95%;
-        padding: 20px;
+        padding: 30px;
     }
 
     nav {
@@ -156,7 +159,7 @@ hr {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     h2 {
@@ -169,5 +172,17 @@ hr {
 
     ul {
         width: 90%;
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
