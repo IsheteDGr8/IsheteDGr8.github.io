@@ -27,7 +27,7 @@ h1 {
 /* Section Headings */
 h2 {
     font-size: 2rem;
-    color: #800000; /* Maroon-Red */
+    color: #D60003; /* Bright-Red */
     margin-top: 40px;
 }
 
@@ -47,14 +47,14 @@ p {
 
 /* Hyperlinks */
 a {
-    color: #800000; /* Maroon-Red */
+    color: #FF4E4E; /* Maroon-Red */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: black;
+    color: #415CF1; /* Blue Shade */
     text-decoration: underline;
 }
 
